@@ -1,6 +1,6 @@
 import {AbstractForm} from './AbstractForm.js';
 
-class Building extends AbstractForm {
+class Plaine extends AbstractForm {
     constructor(
         x = 0,
         y = 0,
@@ -16,7 +16,7 @@ class Building extends AbstractForm {
       }
 
 /**  
- * Dessine la forme du building
+ * Dessine la forme du Plaine
    */
   draw(ctx){
     ctx.save()
@@ -37,25 +37,35 @@ class Building extends AbstractForm {
   }
 
   /** 
-   * premier building
+   * premier Plaine
    */
 
-    building1(){
-        const building1 = new Building(10,0,150,50,'green','black',3,true)
-        return building1
+    Plaine1(){
+        const Plaine1 = new Plaine(10,0,150,50,'green','black',3,true)
+        return Plaine1
     }
-    building2(){
-        const building2= new Building(100,0,180,100,'green','black',3,true)
-        return building2
+    Plaine2(){
+        const Plaine2= new Plaine(100,0,300,100,'green','black',3,true)
+        return Plaine2
     }
-    building3(){
-        const building3= new Building(250,0,180,80,'green','black',3,true)
-        return building3
-  }
-  building3(){
-    const building3= new Building(400,0,180,80,'green','black',3,true)
-    return building3
-  }
+    Plaine3(){
+        const Plaine3= new Plaine(250,0,600,60,'green','black',3,true)
+        return Plaine3
+    }
+    Plaine4(){
+        const Plaine4= new Plaine(350 ,0,600,80,'green','black',3,true)
+        return Plaine4
+    }
+    Plaine5(){
+        const Plaine5= new Plaine(800 ,0,700,70,'green','black',3,true)
+        return Plaine5
+    }
+    Plaine6(){
+        const Plaine6= new Plaine(1200 ,0,700,90,'green','black',3,true)
+        return Plaine6
+    }
+
+
 
 
 
@@ -63,12 +73,17 @@ class Building extends AbstractForm {
    * Dessin de la forme de l'objet
    */
   static buildForms() {
-    const bld = new Building()
+    const bld = new Plaine()
     let forms = []
     forms.push(
-        bld.building1(),
-        bld.building2(),
-        bld.building3(),
+        bld.Plaine1(),
+        bld.Plaine2(),
+        bld.Plaine3(),
+        bld.Plaine4(),
+        bld.Plaine5(),
+        bld.Plaine6()
+
+
         )
 
     const builds = forms
@@ -77,4 +92,4 @@ class Building extends AbstractForm {
   }
   
 }
-export {Building}
+export {Plaine}

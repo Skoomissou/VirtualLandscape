@@ -1,7 +1,9 @@
 import {AbstractForm} from './modules/AbstractForm.js';
-import {Building} from './modules/Building.js';
+import {Plaine} from './modules/Plaine.js';
 import {Soleil} from './modules/Soleil.js';
 import {Nuage} from './modules/Nuage.js';
+import {Arbre} from './modules/Arbre.js';
+
 
 var cwPrev = null
 var chPrev = null
@@ -47,9 +49,11 @@ function _drawForms(forms) {
  */
 function buildForms() {
   let forms = AbstractForm.buildForms()
-  forms = forms.concat(Building.buildForms())
+  forms = forms.concat(Plaine.buildForms())
   forms = forms.concat(Soleil.buildForms())
   forms = forms.concat(Nuage.buildForms())
+  forms = forms.concat(Arbre.buildForms())
+
 
 
 
@@ -63,17 +67,18 @@ function buildForms() {
  * @param whichForm (si on peut le faire en dynamaique, je suis preneur, style passer la classe au lieu de son nom)
  */
 function drawThisForm(whichForm) {
-  if (whichForm === 'Building') {
-    _drawForms(Building.buildForms())
+  if (whichForm === 'Plaine') {
+    _drawForms(Plaine.buildForms())
   } else if (whichForm === 'AbstractForm') {
     _drawForms(AbstractForm.buildForms())
   } else if (whichForm === 'Soleil') {
     _drawForms(Soleil.buildForms())
   } else if (whichForm === 'Nuage') {
     _drawForms(Nuage.buildForms())
+  } else if (whichForm === 'Arbre') {
+    _drawForms(Arbre.buildForms())
 }
 }
-
 
 function drawAllForms() {
   _drawForms(buildForms())
